@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Collision Warning System</title>
+  <title>Adrunio Keyboard</title>
 
   <!-- Prism.js syntax highlighting -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" />
@@ -53,15 +53,14 @@
 
   <section id="information">
     <h2>Project Information</h2>
-    <p><strong>Course:</strong> TECH 117 (Computer Engineering Technology, Fall 2025)</p>
+    <p><strong>Course:</strong> TECH 117 (Computer Engineering Technology, Winter 2026)</p>
     <p><strong>Instructor:</strong> Ph.D. Ana Rodrigues</p>
     <p><strong>Team Members:</strong></p>
     <ul>
       <li>Joshua Ghebru</li>
        <li> Syed Hashmi</li>
         <li>Khuong Duy Nguyen</li>
-       <li> Elijah Palmer
-      </li>
+       <li> Elijah Palmer</li>
     </ul>
   </section>
 
@@ -74,9 +73,8 @@
 
   <section id="circuit-diagram">
     <h2>Circuit Diagram</h2>
-    <p>The ultrasonic sensor measures distance; the Arduino activates LEDs and the buzzer according to distance
-      thresholds.</p>
-    <img src="collision-warning-system-Arduino.jpg" alt="Arduino collision warning system">
+    <p>the user pushes the buttons, activating the LED and the  causing the passive buzzer to emit sound to the corrsponding note.</p>
+    <img src="AdruinoKeyboardCircuit.png" alt="Arduino Keyboard Circuit">
   </section>
 
   <section id="environment">
@@ -168,13 +166,13 @@
 
   <section id="prototype">
     <h2>Prototype</h2>
-    <p>The following image shows the assembled prototype on a breadboard.</p>
-    <img  id="prototypeImage" src="prototype.jpg" alt="Collision warning system prototype">
+    <p>TO BE FILLED</p>
+    <img  id="prototypeImage" src="prototype.jpg" alt="Prototype Image here">
   </section>
 
   <section id="code">
     <h2>Arduino Code</h2>
-    <p>The following Arduino code controls the system, lighting LEDs and activating the buzzer based on distance readings from the HC-SR04 sensor.</p>
+    <p>To be filled</p>
 <div class="code-container" style="position: relative;">
       <button class="copy-btn" onclick="copyCode()" 
               style="position:absolute; top:8px; right:8px; z-index:10;">
@@ -184,6 +182,8 @@
       <pre class="line-numbers">
  
   <code id="arduinoCode" class="language-cpp">
+
+<!--------------   
 // Collision Warning System with Distance Sensor (HC-SR04)
 // Author: Ana Rodrigues
 // Oct 2, 2025
@@ -257,6 +257,8 @@ void loop() {
 
   delay(100);
 }
+
+------------->
     </code>
   </pre>
 
@@ -274,8 +276,7 @@ void loop() {
 
   <section id="conclusion">
     <h2>Conclusion</h2>
-    <p>The system effectively demonstrates distance-based alerting using Arduino. It’s affordable, educational, and
-      sustainable through reusable components.</p>
+    <p>TO BE FILLED</p>
   </section>
 
  <section id="references">
@@ -283,58 +284,23 @@ void loop() {
 
   <ul>
     <li>
-      Arduino Project Hub. (n.d.). 
-      <em>Ultrasonic sensor projects.</em> 
+      Rahulkhanna (2018, Jan 14).
+      <em>Arduino Tutorial: Mini Piano.</em> 
       Arduino Project Hub. 
-      <a href="https://projecthub.arduino.cc/projects/tags/ultrasonic-sensor" target="_blank" rel="noopener noreferrer">
-        https://projecthub.arduino.cc/projects/tags/ultrasonic-sensor
+      <a href=" https://projecthub.arduino.cc/rahulkhanna/arduino-tutorial-mini-piano-0c7ec5" target="_blank" rel="noopener noreferrer">
+      https://projecthub.arduino.cc/rahulkhanna/arduino-tutorial-mini-piano-0c7ec5
       </a>
+    </li>
+  <li>
+      RucksikaaR (2021, Feb 4).
+      <em> Arduino Based Piano.</em> 
+      RucksikaaR (2021, Feb 4)
+      <a href=" https://projecthub.arduino.cc/rahulkhanna/arduino-tutorial-mini-piano-0c7ec5" target="_blank" rel="noopener noreferrer">
+      https://projecthub.arduino.cc/rahulkhanna/arduino-tutorial-mini-piano-0c7ec5
+      
+    </a>
     </li>
 
-    <li>
-      Arduino Project Hub. (n.d.). 
-      <em>Buzzer projects.</em> 
-      Arduino Project Hub. 
-      <a href="https://create.arduino.cc/projecthub/projects/tags/buzzer" target="_blank" rel="noopener noreferrer">
-        https://create.arduino.cc/projecthub/projects/tags/buzzer
-      </a>
-    </li>
-
-    <li>
-      Arduino Project Hub. (n.d.). 
-      <em>LED projects.</em> 
-      Arduino Project Hub. 
-      <a href="https://projecthub.arduino.cc/projects/tags/led" target="_blank" rel="noopener noreferrer">
-        https://projecthub.arduino.cc/projects/tags/led
-      </a>
-    </li>
-
-    <li>
-      Instructables. (n.d.). 
-      <em>Distance measurement using ultrasonic sensor.</em> 
-      Instructables. 
-      <a href="https://www.instructables.com/Arduino-Distance-Measurement-Using-Ultrasonic-Senso/" target="_blank" rel="noopener noreferrer">
-        https://www.instructables.com/Arduino-Distance-Measurement-Using-Ultrasonic-Senso/
-      </a>
-    </li>
-
-    <li>
-      Circuit Basics. (n.d.). 
-      <em>How to use an ultrasonic sensor with Arduino.</em> 
-      Circuit Basics. 
-      <a href="https://www.circuitbasics.com/how-to-use-an-ultrasonic-sensor-with-arduino/" target="_blank" rel="noopener noreferrer">
-        https://www.circuitbasics.com/how-to-use-an-ultrasonic-sensor-with-arduino/
-      </a>
-    </li>
-
-    <li>
-      Last Minute Engineers. (n.d.). 
-      <em>Ultrasonic sensor tutorial.</em> 
-      Last Minute Engineers. 
-      <a href="https://lastminuteengineers.com/ultrasonic-sensor-arduino-tutorial/" target="_blank" rel="noopener noreferrer">
-        https://lastminuteengineers.com/ultrasonic-sensor-arduino-tutorial/
-      </a>
-    </li>
   </ul>
 </section>
 
