@@ -7,7 +7,8 @@
   <title>Adrunio Keyboard</title>
 
   <!-- Prism.js syntax highlighting -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
@@ -15,6 +16,7 @@
   <!-- Includes the stylesheet file styles.css -->
   <link rel="stylesheet" href="styles.css?v=2" />
 </head>
+
 <script>
   window.addEventListener("beforeprint", () => {
     const proto = document.getElementById("prototypeImage");
@@ -26,8 +28,8 @@
   });
 </script>
 
-
 <body>
+
   <!-- Fixed Navigation Menu -->
   <nav id="menu">
     <h3>Menu</h3>
@@ -44,47 +46,97 @@
       <li><a href="#references">References</a></li>
     </ul>
   </nav>
- <button class="print-button" onclick="window.print()" style="position: fixed; bottom: 24px; right: 24px; padding: 10px 16px; background: #2563eb; color: white; border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.15); font-size: 0.9rem; z-index: 2000;">  Print This Page </button>
+
+  <button class="print-button" onclick="window.print()"
+    style="position: fixed; bottom: 24px; right: 24px; padding: 10px 16px; background: #2563eb; color: white; border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.15); font-size: 0.9rem; z-index: 2000;">
+     Print This Page
+  </button>
 
   <h1 id="top">Arduino Musical Keyboard </h1>
-<div id="print-hero">
+
+  <div id="print-hero">
     <img src="" alt="">
-</div>
+  </div>
 
   <section id="information">
     <h2>Project Information</h2>
+
     <p><strong>Course:</strong> TECH 117 (Computer Engineering Technology, Winter 2026)</p>
     <p><strong>Instructor:</strong> Ph.D. Ana Rodrigues</p>
+
     <p><strong>Team Members:</strong></p>
     <ul>
       <li>Joshua Ghebru</li>
-       <li> Syed Hashmi</li>
-        <li>Khuong Duy Nguyen</li>
-       <li> Elijah Palmer</li>
+      <li> Syed Hashmi</li>
+      <li>Khuong Duy Nguyen</li>
+      <li> Elijah Palmer</li>
     </ul>
   </section>
 
   <section id="introduction">
     <h2>Introduction</h2>
-    <p>This project uses an <strong>Arduino Uno</strong>,  multiple <strong>push buttons</strong>, a
-      <strong>passive buzzer</strong>, and <strong>red/yellow/green LEDs</strong> to provide visual feedback to the buzzer audio that will be triggered by the buttons.
+
+    <p>
+      The project aims to build a simple electronic piano using two <strong>Arduino Uno</strong> boards. Our project
+      uses multiple <strong>push buttons</strong> as piano keys, a
+
+      and connects them to two <strong>passive buzzers</strong>. When a key is pressed, it shall play a single piano
+      note,
+
+      and corresponding <strong>LEDs</strong> will provide visual feedback to the buzzer audio that will be triggered by
+      the buttons.
     </p>
+
+    <h3>Success Criteria</h3>
+    <ul>
+      <li>The circuit works reliably, and every button plays the correct note.</li>
+
+      <li>The sound from both buzzers is clear, and there is minimal latency in the playback.</li>
+
+      <li>We are able to form melodies by pressing the keys in sequence.</li>
+    </ul>
+
+    <h3>Limitations and Risks</h3>
+    <ul>
+      <li><strong>Time:</strong> We have about
+        three weeks as of writing this to finalize our project.</li>
+
+      <li><strong>Money:</strong> As we are using two arduino units, we will
+        have to be conservative with how much we spend on the other parts of our project.
+
+      <li><strong>Parts:</strong> The buzzer we are using may give us some issues when trying to output
+        the specific frequencies we desire, and the sound may have some latency</li>
+
+      <li><strong>Alternative Plans:</strong> If we have trouble integrating the two arduino units, we will have to
+        condense our prokect
+        to one unit, limiting the range of notes we will have. Alternatively, if the two buzzers do not work well
+        together, we can switch to using only one speaker.
+        </strong></li>
+    </ul>
   </section>
 
   <section id="circuit-diagram">
     <h2>Circuit Diagram</h2>
-    <p>the user pushes the buttons, activating the LED and the  causing the passive buzzer to emit sound to the corrsponding note.</p>
+
+    <p>
+      the user pushes the buttons, activating the LED and the causing the passive buzzer to emit sound to the
+      corrsponding note.
+    </p>
+
     <img src="AdruinoKeyboardCircuit.png" alt="Arduino Keyboard Circuit">
   </section>
 
   <section id="environment">
     <h2>Environmental Impact Assessment</h2>
+
     <ul>
-      <li><strong>Materials:</strong> The Arduino Uno is RoHS and WEEE compliant, limiting hazardous substances.
-      </li>
+      <li><strong>Materials:</strong> The Arduino Uno is RoHS and WEEE compliant, limiting hazardous substances.</li>
+
       <li><strong>Energy Efficiency:</strong> The circuit draws minimal power (~50 mA at 5V), ideal for USB or
         solar power.</li>
+
       <li><strong>Reusability:</strong> All components are modular and reusable, reducing electronic waste.</li>
+
       <li><strong>Packaging & Shipping:</strong> Ordering all components from a single supplier helps minimize
         carbon footprint.</li>
     </ul>
@@ -92,6 +144,7 @@
 
   <section id="bom">
     <h2>Bill of Materials (BoM)</h2>
+
     <table>
       <thead>
         <tr>
@@ -102,6 +155,7 @@
           <th>Source</th>
         </tr>
       </thead>
+
       <tbody>
         <tr>
           <td>Arduino Uno Rev3</td>
@@ -110,6 +164,7 @@
           <td>$27.60</td>
           <td><a href="https://store-usa.arduino.cc/products/arduino-uno-rev3">Arduino Store</a></td>
         </tr>
+
         <tr>
           <td>Passive Buzzer</td>
           <td>1</td>
@@ -117,6 +172,7 @@
           <td>$0.95</td>
           <td><a href="https://www.sparkfun.com/passive-buzzer-module.html">SparkFun</a></td>
         </tr>
+
         <tr>
           <td>LEDs (Red, Yellow, Green)</td>
           <td>14</td>
@@ -124,6 +180,7 @@
           <td>$2.80</td>
           <td>Adafruit</td>
         </tr>
+
         <tr>
           <td>100 Ω Resistors</td>
           <td>1</td>
@@ -131,13 +188,15 @@
           <td>$0.03</td>
           <td>Adafruit</td>
         </tr>
-         <tr>
+
+        <tr>
           <td>10k Ω Resistors</td>
           <td>14</td>
           <td>$0.03</td>
           <td>$0.42</td>
           <td>Adafruit</td>
         </tr>
+
         <tr>
           <td>Breadboard</td>
           <td>1</td>
@@ -145,15 +204,18 @@
           <td>$4.95</td>
           <td><a href="https://www.adafruit.com/product/64">Adafruit</a></td>
         </tr>
+
         <tr>
           <td>Jumper Wires</td>
           <td>1 set</td>
           <td>$3.50</td>
           <td>$3.50</td>
-          <td><a href="https://www.sparkfun.com/jumper-wires-standard-7-m-m-30-awg-30-pack.html">SparkFun</a>
+          <td>
+            <a href="https://www.sparkfun.com/jumper-wires-standard-7-m-m-30-awg-30-pack.html">SparkFun</a>
           </td>
         </tr>
       </tbody>
+
       <tfoot>
         <tr>
           <td colspan="3">Estimated Total</td>
@@ -166,146 +228,112 @@
 
   <section id="prototype">
     <h2>Prototype</h2>
+
     <p>TO BE FILLED</p>
-    <img  id="prototypeImage" src="prototype.jpg" alt="Prototype Image here">
+
+    <img id="prototypeImage" src="prototype.jpg" alt="Prototype Image here">
   </section>
 
   <section id="code">
     <h2>Arduino Code</h2>
+
     <p>To be filled</p>
-<div class="code-container" style="position: relative;">
-      <button class="copy-btn" onclick="copyCode()" 
-              style="position:absolute; top:8px; right:8px; z-index:10;">
-          Copy
+
+    <div class="code-container" style="position: relative;">
+      <button class="copy-btn" onclick="copyCode()"
+        style="position:absolute; top:8px; right:8px; z-index:10;">
+        Copy
       </button>
 
       <pre class="line-numbers">
- 
   <code id="arduinoCode" class="language-cpp">
 
-<!--------------   
-// Collision Warning System with Distance Sensor (HC-SR04)
-// Author: Ana Rodrigues
-// Oct 2, 2025
-// Object is farther than 50cm: Green LED lights up
-// Object is closer than 50 cm, but more than 10cm away: Yellow LED lights, buzzer plays 300Hz tone
-// Object is closer than 10cm: Red LED lights up, buzzer plays 500Hz tone
+<!--------------    
 
-//LED pins
-const int greenLED = 2;
-const int yellowLED = 3;
-const int redLED = 4;
+// Collision Warning System with Distance Sensor (HC-SR04) 
 
-// Ultrasonic sensor pins
-const int trigPin = 9;
-const int echoPin = 10;
+// Author: Ana Rodrigues 
 
-// Passive buzzer pin
-const int buzzer = 11;
+// Oct 2, 2025 
 
-void setup() {
-  pinMode(greenLED, OUTPUT);
-  pinMode(yellowLED, OUTPUT);
-  pinMode(redLED, OUTPUT);
-  pinMode(trigPin, OUTPUT);
-  pinMode(echoPin, INPUT);
-  Serial.begin(9600);
-}
+// Object is farther than 50cm: Green LED lights up 
 
-void loop() {
-  // Measure distance
-  digitalWrite(trigPin, LOW);
-  delayMicroseconds(2);
-  digitalWrite(trigPin, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(trigPin, LOW);
+// Object is closer than 50 cm, but more than 10cm away: Yellow LED lights, buzzer plays 300Hz tone 
 
-  long duration = pulseIn(echoPin, HIGH);
-  long distance = duration * 0.034 / 2;
+// Object is closer than 10cm: Red LED lights up, buzzer plays 500Hz tone 
 
-  Serial.print("Distance: ");
-  Serial.print(distance);
-  Serial.println(" cm");
   
-  //Error in measurement:
+
+//LED pins 
+
+const int greenLED = 2; 
+
+const int yellowLED = 3; 
+
+const int redLED = 4; 
+
+  
+
+// Ultrasonic sensor pins 
+
+const int trigPin = 9; 
+
+const int echoPin = 10; 
+
+  
+
+// Passive buzzer pin 
+
+const int buzzer = 11; 
+
+  
+
+void setup() { 
+
+  pinMode(greenLED, OUTPUT); 
+
+  pinMode(yellowLED, OUTPUT); 
+
+  pinMode(redLED, OUTPUT); 
+
+  pinMode(trigPin, OUTPUT); 
+
+  pinMode(echoPin, INPUT); 
+
+  Serial.begin(9600); 
+
+} 
+
+  
+
+void loop() { 
+
+  // Measure distance 
+
+  digitalWrite(trigPin, LOW); 
+
+  delayMicroseconds(2); 
+
+  digitalWrite(trigPin, HIGH); 
+
+  delayMicroseconds(10); 
+
+  digitalWrite(trigPin, LOW); 
+
+  
+
+  long duration = pulseIn(echoPin, HIGH); 
+
+  long distance = duration * 0.034 / 2; 
+
+  
+
+  Serial.print("Distance: "); 
+
+  Serial.print(distance); 
+
+  Serial.println(" cm"); 
+
+  
+
   if (distance <= 0)
-    return;
-
-  //Too close:
-  if (distance <= 10) {
-    digitalWrite(greenLED, LOW);
-    digitalWrite(yellowLED, LOW);
-    digitalWrite(redLED, HIGH);
-    tone(buzzer, 500); // Play 500Hz tone
-    return;
-  }
-
-  //Midrange:
-  if (distance <= 30) {
-    digitalWrite(greenLED, LOW);
-    digitalWrite(yellowLED, HIGH);
-    digitalWrite(redLED, LOW);
-    tone(buzzer, 300); // Play 300Hz tone
-    return;
-  }
-
-  //Normal status:
-  digitalWrite(greenLED, HIGH);
-  digitalWrite(yellowLED, LOW);
-  digitalWrite(redLED, LOW);
-  noTone(buzzer); // stop buzzer
-
-  delay(100);
-}
-
-------------->
-    </code>
-  </pre>
-
-    <script>
-      function copyCode() {
-        const code = document.getElementById('arduinoCode').innerText;
-        navigator.clipboard.writeText(code).then(() => {
-          alert('Code copied to clipboard!');
-        });
-      }
-    </script>
-  </section>
-
-
-
-  <section id="conclusion">
-    <h2>Conclusion</h2>
-    <p>TO BE FILLED</p>
-  </section>
-
- <section id="references">
-  <h2>References</h2>
-
-  <ul>
-    <li>
-      Rahulkhanna (2018, Jan 14).
-      <em>Arduino Tutorial: Mini Piano.</em> 
-      Arduino Project Hub. 
-      <a href=" https://projecthub.arduino.cc/rahulkhanna/arduino-tutorial-mini-piano-0c7ec5" target="_blank" rel="noopener noreferrer">
-      https://projecthub.arduino.cc/rahulkhanna/arduino-tutorial-mini-piano-0c7ec5
-      </a>
-    </li>
-  <li>
-      RucksikaaR (2021, Feb 4).
-      <em> Arduino Based Piano.</em> 
-      RucksikaaR (2021, Feb 4)
-      <a href=" https://projecthub.arduino.cc/rahulkhanna/arduino-tutorial-mini-piano-0c7ec5" target="_blank" rel="noopener noreferrer">
-      https://projecthub.arduino.cc/rahulkhanna/arduino-tutorial-mini-piano-0c7ec5
-      
-    </a>
-    </li>
-
-  </ul>
-</section>
-
-
-
-</body>
-
-</html>
