@@ -182,21 +182,27 @@
         </tr>
 
         <tr>
-          <td>100 Ω Resistors</td>
-          <td>1</td>
-          <td>$0.03</td>
-          <td>$0.03</td>
-          <td>Adafruit</td>
-        </tr>
-
-        <tr>
-          <td>10k Ω Resistors</td>
-          <td>14</td>
+          <td>220 Ω Resistors</td>
+          <td>13</td>
           <td>$0.03</td>
           <td>$0.42</td>
           <td>Adafruit</td>
         </tr>
+    <tr>
+          <td>9-Volt battery</td>
+          <td>1</td>
+          <td>$4.67</td>
+          <td>$4.67</td>
+          <td><a href="https://www.walmart.ca/en/ip/energizer-max-9v-batteries-1-pack-9-volt-alkaline-batteries/205004?classType=REGULAR&athbdg=L1102">Walmart</a></td>
+        </tr>
 
+         <tr>
+          <td>Tactile Buttons</td>
+          <td>13</td>
+          <td>$0.87</td>
+          <td>$11.31</td>
+          <td><a href="https://www.sparkfun.com/tactile-button-smd-12mm.html">SparkFun</a></td>
+        </tr>
         <tr>
           <td>Breadboard</td>
           <td>1</td>
@@ -248,11 +254,15 @@
       <pre class="line-numbers">
   <code id="arduinoCode" class="language-cpp">
 // AdruinoKeyboardCircuit 
-
 // Author: Group 4 -- Elijah Palmer 
-
 // April 12, 2026 
 
+
+/*
+* HOW TO USE
+* Press a button to play a musical note. The notes get higher from left to right.
+*
+*/
 void setup() {
   // This activates a 20k ohm resistor inside the chip!
   pinMode(2, INPUT_PULLUP); 
@@ -262,107 +272,87 @@ void setup() {
   pinMode(6, INPUT_PULLUP);
   pinMode(7, INPUT_PULLUP);
   pinMode(8, INPUT_PULLUP);
+  pinMode(9, INPUT_PULLUP); 
+  pinMode(10, INPUT_PULLUP);
+  pinMode(11, INPUT_PULLUP);
+  pinMode(13, INPUT_PULLUP);
+  pinMode(A0, INPUT_PULLUP);
+  pinMode(A1, INPUT_PULLUP);
 
   //Buzzer:
   pinMode(12, OUTPUT);
  
-  //Serial Log: pinMode(8, OUTPUT);
   Serial.begin(9600);
 }
 
 void loop() {
   // Logic is inverted: LOW means pressed, HIGH means not pressed
+
   if (digitalRead(2) == LOW) {
-    // Button on Pin 2 was pressed
     Serial.println("Button 1");
-    tone(12, 261, 100); // play tone 57 (A4 = 440 Hz)
-    
+    tone(12, 261, 100); // C4
   }
-   if (digitalRead(3) == LOW) {
-    // Button on Pin 3 was pressed
+
+  if (digitalRead(3) == LOW) {
     Serial.println("Button 2");
-    tone(12, 293, 100); // play tone 59 (B4 = 494 Hz)
+    tone(12, 293, 100); // D4
   }
+
   if (digitalRead(4) == LOW) {
-    // Button on Pin 4 was pressed
-    Serial.println("Button 3");
-    tone(12, 329, 100); // play tone 59 (B4 = 494 Hz)
+    Serial.println("Button 1");
+    tone(12, 329, 100); // E4
   }
+
   if (digitalRead(5) == LOW) {
-    // Button on Pin 5 was pressed
-    Serial.println("Button 4");
-    tone(12, 350, 100); // play tone 59 (B4 = 494 Hz)
+    Serial.println("Button 2");
+    tone(12, 361, 100); // ~F4 (slightly off, real is 349 Hz)
   }
+  
   if (digitalRead(6) == LOW) {
-    // Button on Pin 6 was pressed
-    Serial.println("Button 5");
-    tone(12, 392, 100); // play tone 59 (B4 = 494 Hz)
+    Serial.println("Button 1");
+    tone(12, 393, 100); // G4
   }
   
   if (digitalRead(7) == LOW) {
-    // Button on Pin 7 was pressed
-    Serial.println("Button 6");
-    tone(12, 440, 100); // play tone 59 (B4 = 494 Hz)
+    Serial.println("Button 2");
+    tone(12, 1000, 100); // ~B5 (not standard B4/B5)
   }
-  
+
   if (digitalRead(8) == LOW) {
-    // Button on Pin 8 was pressed
-    Serial.println("Button 7");
-    tone(12, 493, 100); // play tone 59 (B4 = 494 Hz)
+    Serial.println("Button 1");
+    tone(12, 523, 100); // C5
   }
- 
+
+  if (digitalRead(9) == LOW) {
+    Serial.println("Button 2");
+    tone(12, 587, 100); // D5
+  }
+
+  if (digitalRead(10) == LOW) {
+    Serial.println("Button 1");
+    tone(12, 659, 100); // E5
+  }
+
+  if (digitalRead(11) == LOW) {
+    Serial.println("Button 2");
+    tone(12, 698, 100); // F5
+  }
+
+  if (digitalRead(13) == LOW) {
+    Serial.println("Button 1");
+    tone(12, 783, 100); // G5
+  }
+
+  if (digitalRead(A0) == LOW) {
+    Serial.println("Button 2");
+    tone(12, 850, 100); // ~G#5/A♭5 (approx)
+  }
+
+  if (digitalRead(A1) == LOW) {
+    Serial.println("Button 1");
+    tone(12, 920, 100); // ~A#5/B♭5 (approx)
+  }
+
   delay(100);
 }
-
 //--------------------------------
-//set to second AdruinoKeyboardCircuit
-void setup() {
-  pinMode(2, INPUT_PULLUP); 
-  pinMode(3, INPUT_PULLUP);
-  pinMode(4, INPUT_PULLUP);
-  pinMode(5, INPUT_PULLUP);
-  pinMode(6, INPUT_PULLUP);
-  pinMode(7, INPUT_PULLUP);
-  pinMode(8, INPUT_PULLUP);
-
-  pinMode(12, OUTPUT);
-
-  Serial.begin(9600);
-}
-
-void loop() {
-
-  if (digitalRead(2) == LOW) {
-    Serial.println("Button 1 (High Octave)");
-    tone(12, 523, 100);
-  }
-  else if (digitalRead(3) == LOW) {
-    Serial.println("Button 2 (High Octave)");
-    tone(12, 587, 100);
-  }
-  else if (digitalRead(4) == LOW) {
-    Serial.println("Button 3 (High Octave)");
-    tone(12, 659, 100);
-  }
-  else if (digitalRead(5) == LOW) {
-    Serial.println("Button 4 (High Octave)");
-    tone(12, 698, 100);
-  }
-  else if (digitalRead(6) == LOW) {
-    Serial.println("Button 5 (High Octave)");
-    tone(12, 784, 100);
-  }
-  else if (digitalRead(7) == LOW) {
-    Serial.println("Button 6 (High Octave)");
-    tone(12, 880, 100);
-  }
-  else if (digitalRead(8) == LOW) {
-    Serial.println("Button 7 (High Octave)");
-    tone(12, 988, 100);
-  }
-  else {
-    noTone(12);
-  }
-
-  delay(100);
-}
