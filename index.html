@@ -77,14 +77,11 @@
     <h2>Introduction</h2>
 
     <p>
-      The project aims to build a simple electronic piano using two <strong>Arduino Uno</strong> boards. Our project
+      The project aims to build a simple electronic piano using an <strong>Arduino Uno</strong> board. Our project
       uses multiple <strong>push buttons</strong> as piano keys, a
 
-      and connects them to two <strong>passive buzzers</strong>. When a key is pressed, it shall play a single piano
-      note,
-
-      and corresponding <strong>LEDs</strong> will provide visual feedback to the buzzer audio that will be triggered by
-      the buttons.
+      and connects them to a <strong>passive buzzer</strong>. When a key is pressed, it shall play a single piano
+      note.
     </p>
 
     <h3>Success Criteria</h3>
@@ -101,8 +98,7 @@
       <li><strong>Time:</strong> We have about
         three weeks as of writing this to finalize our project.</li>
 
-      <li><strong>Money:</strong> As we are using two arduino units, we will
-        have to be conservative with how much we spend on the other parts of our project.
+  
 
       <li><strong>Parts:</strong> The buzzer we are using may give us some issues when trying to output
         the specific frequencies we desire, and the sound may have some latency</li>
@@ -159,9 +155,9 @@
       <tbody>
         <tr>
           <td>Arduino Uno Rev3</td>
-          <td>2</td>
+          <td>1</td>
           <td>$27.60</td>
-          <td>$55.20</td>
+          <td>$27.60</td>
           <td><a href="https://store-usa.arduino.cc/products/arduino-uno-rev3">Arduino Store</a></td>
         </tr>
 
@@ -171,14 +167,6 @@
           <td>$0.95</td>
           <td>$0.95</td>
           <td><a href="https://www.sparkfun.com/passive-buzzer-module.html">SparkFun</a></td>
-        </tr>
-
-        <tr>
-          <td>LEDs (Red, Yellow, Green)</td>
-          <td>14</td>
-          <td>$0.20</td>
-          <td>$2.80</td>
-          <td>Adafruit</td>
         </tr>
 
         <tr>
@@ -235,15 +223,15 @@
   <section id="prototype">
     <h2>Prototype</h2>
 
-    <p>TO BE FILLED</p>
+    
 
-    <img id="prototypeImage" src="prototype.jpg" alt="Prototype Image here">
+    <img id="prototypeImage" src="keyboardPrototype.jpeg" alt="Prototype Image here">
   </section>
 
   <section id="code">
     <h2>Arduino Code</h2>
 
-    <p>To be filled</p>
+  
 
     <div class="code-container" style="position: relative;">
       <button class="copy-btn" onclick="copyCode()"
@@ -305,7 +293,7 @@ void loop() {
 
   if (digitalRead(5) == LOW) {
     Serial.println("Button 2");
-    tone(12, 361, 100); // ~F4 (slightly off, real is 349 Hz)
+    tone(12, 361, 100); // ~F4 
   }
   
   if (digitalRead(6) == LOW) {
@@ -315,7 +303,7 @@ void loop() {
   
   if (digitalRead(7) == LOW) {
     Serial.println("Button 2");
-    tone(12, 1000, 100); // ~B5 (not standard B4/B5)
+    tone(12, 1000, 100); // ~B5 
   }
 
   if (digitalRead(8) == LOW) {
@@ -345,12 +333,12 @@ void loop() {
 
   if (digitalRead(A0) == LOW) {
     Serial.println("Button 2");
-    tone(12, 850, 100); // ~G#5/A♭5 (approx)
+    tone(12, 850, 100); // ~G#5/A♭5 
   }
 
   if (digitalRead(A1) == LOW) {
     Serial.println("Button 1");
-    tone(12, 920, 100); // ~A#5/B♭5 (approx)
+    tone(12, 920, 100); // ~A#5/B♭5
   }
 
   delay(100);
