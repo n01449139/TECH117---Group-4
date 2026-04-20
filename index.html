@@ -293,7 +293,7 @@ void loop() {
 
   if (digitalRead(5) == LOW) {
     Serial.println("Button 2");
-    tone(12, 361, 100); // ~F4 
+    tone(12, 361, 100); // ~F4 (slightly off, real is 349 Hz)
   }
   
   if (digitalRead(6) == LOW) {
@@ -303,7 +303,7 @@ void loop() {
   
   if (digitalRead(7) == LOW) {
     Serial.println("Button 2");
-    tone(12, 1000, 100); // ~B5 
+    tone(12, 1000, 100); // ~B5 (not standard B4/B5)
   }
 
   if (digitalRead(8) == LOW) {
@@ -333,12 +333,12 @@ void loop() {
 
   if (digitalRead(A0) == LOW) {
     Serial.println("Button 2");
-    tone(12, 850, 100); // ~G#5/A♭5 
+    tone(12, 850, 100); // ~G#5/A♭5 (approx)
   }
 
   if (digitalRead(A1) == LOW) {
     Serial.println("Button 1");
-    tone(12, 920, 100); // ~A#5/B♭5
+    tone(12, 920, 100); // ~A#5/B♭5 (approx)
   }
 
   delay(100);
